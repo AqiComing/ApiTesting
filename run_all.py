@@ -9,5 +9,5 @@ from mail.email_config import send_email
 # f.close()
 suite = unittest.defaultTestLoader.discover("./")
 with open("report.html", 'wb') as f:  # 改为with open 格式
-    HTMLTestRunner(stream=f, title="Api Test", description="测试描述", tester="卡卡").run(suite)
+    HTMLTestRunner(stream=f, title="Api Test", description="测试描述", tester="Nick").run(suite)
 send_email('report.html')  # 发送邮件
