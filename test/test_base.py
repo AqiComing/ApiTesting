@@ -24,12 +24,14 @@ class TestBase(unittest.TestCase):
         method = case_data.get('method')
         data_type = case_data.get('data_type')
         if method.upper() == 'GET':   # GET类型请求
+            log_case_info(case_name, url, json.dumps(args), expect_res, res.text)
             res = requests.get(url=url, params=json.loads(args))
         elif data_type.upper() == 'FORM':   # 表单格式请求
             res = requests.post(url=url, data=json.loads(args), headers=json.loads(headers))
-            # log_case_info(case_name, url, args, expect_res, res.text)
+            log_case_info(case_name, url, args, expect_res, res.text)
         else:
+            log_case_info(case_name, url, args, json.dumps(json.loads(expect_res), sort_keys=True),
+                json.dumps(res.json(), ensure_ascii=False, sort_keys=True))
             res = requests.post(url=url, json=json.loads(args), headers=json.loads(headers))   # JSON格式请求
-            # log_case_info(case_name, url, args, json.dumps(json.loads(expect_res), sort_keys=True),
-            #     json.dumps(res.json(), ensure_ascii=False, sort_keys=True))
+            
         return res

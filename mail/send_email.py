@@ -24,7 +24,7 @@ def send_email(report_file):
     msg.attach(att1)
     try:
         smtp = smtplib.SMTP_SSL('smtp.qq.com')  # smtp服务器地址 使用SSL模式
-        smtp.login(email_datas['From'], 'iptzeudeujtxbjhc')  #User name and smtp password
+        smtp.login(email_datas['From'], email_datas['SmtpPsw'])  #User name and smtp password
         smtp.sendmail(email_datas['From'], email_datas['To'] , msg.as_string())
         logging.info("Email send successed!")
     except Exception as e:

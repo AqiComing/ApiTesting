@@ -1,19 +1,21 @@
 import unittest
 import requests
-from db import *  # 导入db.py文件，源码见上篇
+from db import *
+from test.test_base import TestBase
+import json
 
 # 数据准备
 NOT_EXIST_USER = '范冰冰'
 EXIST_USER = '张三'
 
 
-class TestUserReg(unittest.TestCase):
-    url = 'http://115.28.108.130:5000/api/user/reg/'
-
+class TestUserReg(TestBase):
     def test_user_reg_normal(self):
+        case_data=self.get_case_data('test_user_reg_normal')
+        name=json.load(case_data['args']).get('name')
         # 环境检查
-        if check_user(NOT_EXIST_USER):
-            del_user(NOT_EXIST_USER)
+        if check_user(name):
+            del_user(name)
 
         # 发送请求
         data = {'name': NOT_EXIST_USER, 'password': '123456'}
