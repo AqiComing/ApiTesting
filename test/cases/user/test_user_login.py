@@ -7,6 +7,7 @@ from test.test_base import TestBase
 
 class TestUserLogin(TestBase): 
 
+    """level1:正常登录"""
     def test_user_login_normal(self):  
 
         data=get_test_data(self.data_list,'test_user_login_normal')  

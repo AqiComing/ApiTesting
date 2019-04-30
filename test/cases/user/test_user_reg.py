@@ -18,8 +18,7 @@ class TestUserReg(TestBase):
             del_user(name)
 
         # 发送请求
-        data = {'name': NOT_EXIST_USER, 'password': '123456'}
-        res = requests.post(url=self.url, json=data)
+        res=self.send_request(case_data)
 
         # 期望响应结果，注意字典格式和json格式的区别（如果有true/false/null要转化为字典格式）
         except_res = {
@@ -41,13 +40,14 @@ class TestUserReg(TestBase):
         del_user(NOT_EXIST_USER)
 
     def test_user_reg_exist(self):
+        case_data=self.get_case_data('test_user_reg_exist')
+        name=json.load(case_data['args']).get('name')
         # 环境检查
         if not check_user(EXIST_USER):
             add_user(EXIST_USER, '123456')
 
         # 发送请求
-        data = {'name': EXIST_USER, 'password': '123456'}
-        res = requests.post(url=self.url, json=data)
+        res = self.send_request(case_data)
 
         # 期望响应结果，注意字典格式和json格式的区别（如果有true/false/null要转化为字典格式）
         except_res = {

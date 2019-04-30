@@ -3,6 +3,7 @@ import sys
 import requests
 from data.read_excel import *
 from log.logger import*
+from optparse import OptionParser  
 
 sys.path.append("../..")
 
@@ -35,3 +36,8 @@ class TestBase(unittest.TestCase):
             res = requests.post(url=url, json=json.loads(args), headers=json.loads(headers))   # JSON格式请求
             
         return res
+    
+    def tag(self,tag):
+        if tag==OptionParser.has_option(tag):
+            return lambda func:func
+        return unittest.skip("Skip cases ha no tag:{0}".format(tag))
