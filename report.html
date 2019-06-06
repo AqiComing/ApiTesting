@@ -122,10 +122,10 @@ function html_escape(s) {
 </script>
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">Api Test</h1>
-<p class='attribute'><strong>测试人员 : </strong> 卡卡</p>
-<p class='attribute'><strong>开始时间 : </strong> 2018-09-11 16:37:07</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.924454</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 4，通过 4，通过率= 100.00%</p>
+<p class='attribute'><strong>测试人员 : </strong> Nick</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-06-05 15:59:20</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:01:55.639158</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 4，通过 1，失败 1，错误 2，通过率= 25.00%</p>
 
 <p class='description'>测试描述</p>
 </div>
@@ -133,9 +133,9 @@ function html_escape(s) {
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
-<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 4 }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 25.00% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 1 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 1 }</a>
 <a class="btn btn-info" href='javascript:showCase(3)'>所有{ 4 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
@@ -156,47 +156,193 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='passClass warning'>
-    <td>test_user_login.TestUserLogin</td>
+<tr class='failClass warning'>
+    <td>test_user_login.TestUserLogin: level1:正常登录</td>
     <td class="text-center">2</td>
-    <td class="text-center">2</td>
-    <td class="text-center">0</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',2)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='pt1_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_user_login_normal</div></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
-</tr>
-
-<tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_user_login_password_wrong</div></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
-</tr>
-
-<tr class='passClass warning'>
-    <td>test_user_reg.TestUserReg</td>
-    <td class="text-center">2</td>
-    <td class="text-center">2</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c2',2)" class="detail" id='c2'>详细</a></td>
-</tr>
-
-<tr id='pt2_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_user_reg_exist</div></td>
+<tr id='ft1_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_user_login_normal</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
-    <div id='div_pt2_1' class="collapse">  -->
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
+    <div id='div_ft1_1' class="collapse">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
-    <div id='div_pt2_1' class="collapse in">
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
+    <div id='div_ft1_1' class="collapse in">
     <pre>
     
-pt2_1: (2, '张三', 'e10adc3949ba59abbe56e057f20f883e')
+ft1_1: --- Logging error ---
+Traceback (most recent call last):
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\logging\__init__.py", line 995, in emit
+    stream.write(msg)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 77-80: character maps to &lt;undefined&gt;
+Call stack:
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles/ptvsd_launcher.py", line 43, in &lt;module&gt;
+    main(ptvsdArgs)
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 434, in main
+    run()
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 312, in run_file
+    runpy.run_path(target, run_name='__main__')
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 112, in &lt;module&gt;
+    main()   # 调用main()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 106, in main
+    run_all()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 32, in run_all
+    run(discover())
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 28, in run
+    HTMLTestRunner(stream=f, title="Api Test", description="测试描述", tester="Nick").run(suite)
+  File "d:\AqiProject\ApiDemo\api_test_framework\HTMLTestReportCN.py", line 571, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 653, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\cases\user\test_user_login.py", line 14, in test_user_login_normal
+    res = self.send_request(data)
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\test_base.py", line 32, in send_request
+    log_case_info(case_name, url, args, expect_res, res.text)
+  File "d:\AqiProject\ApiDemo\api_test_framework\log\logger.py", line 15, in log_case_info
+    logging.info(a)
+Message: 'Expect result :&lt;h1&gt;登录成功&lt;/h1&gt;'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\logging\__init__.py", line 995, in emit
+    stream.write(msg)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 74-75: character maps to &lt;undefined&gt;
+Call stack:
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles/ptvsd_launcher.py", line 43, in &lt;module&gt;
+    main(ptvsdArgs)
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 434, in main
+    run()
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 312, in run_file
+    runpy.run_path(target, run_name='__main__')
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 112, in &lt;module&gt;
+    main()   # 调用main()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 106, in main
+    run_all()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 32, in run_all
+    run(discover())
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 28, in run
+    HTMLTestRunner(stream=f, title="Api Test", description="测试描述", tester="Nick").run(suite)
+  File "d:\AqiProject\ApiDemo\api_test_framework\HTMLTestReportCN.py", line 571, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 653, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\cases\user\test_user_login.py", line 14, in test_user_login_normal
+    res = self.send_request(data)
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\test_base.py", line 32, in send_request
+    log_case_info(case_name, url, args, expect_res, res.text)
+  File "d:\AqiProject\ApiDemo\api_test_framework\log\logger.py", line 16, in log_case_info
+    logging.info(b)
+Message: 'Args: {"name": "张三","password":"123456"}'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\logging\__init__.py", line 995, in emit
+    stream.write(msg)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 78-88: character maps to &lt;undefined&gt;
+Call stack:
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles/ptvsd_launcher.py", line 43, in &lt;module&gt;
+    main(ptvsdArgs)
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 434, in main
+    run()
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 312, in run_file
+    runpy.run_path(target, run_name='__main__')
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 112, in &lt;module&gt;
+    main()   # 调用main()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 106, in main
+    run_all()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 32, in run_all
+    run(discover())
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 28, in run
+    HTMLTestRunner(stream=f, title="Api Test", description="测试描述", tester="Nick").run(suite)
+  File "d:\AqiProject\ApiDemo\api_test_framework\HTMLTestReportCN.py", line 571, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 653, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\cases\user\test_user_login.py", line 14, in test_user_login_normal
+    res = self.send_request(data)
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\test_base.py", line 32, in send_request
+    log_case_info(case_name, url, args, expect_res, res.text)
+  File "d:\AqiProject\ApiDemo\api_test_framework\log\logger.py", line 17, in log_case_info
+    logging.info('Actually result:{}'.format(atc_res))
+Message: 'Actually result:&lt;h1&gt;失败，用户名或密码错误&lt;/h1&gt;'
+Arguments: ()
+Traceback (most recent call last):
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\cases\user\test_user_login.py", line 15, in test_user_login_normal
+    self.assertIn(res.text,data['expect_res'],'The text should be 登陆成功')
+AssertionError: '&lt;h1&gt;失败，用户名或密码错误&lt;/h1&gt;' not found in '&lt;h1&gt;登录成功&lt;/h1&gt;' : The text should be 登陆成功
 
 
     </pre>
@@ -204,20 +350,239 @@ pt2_1: (2, '张三', 'e10adc3949ba59abbe56e057f20f883e')
     </td>
 </tr>
 
-<tr id='pt2_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_user_reg_normal</div></td>
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_user_login_password_wrong</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
-    <div id='div_pt2_2' class="collapse">  -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
-    <div id='div_pt2_2' class="collapse in">
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in">
     <pre>
     
-pt2_2: (5, '范冰冰', 'e10adc3949ba59abbe56e057f20f883e')
-(6, '范冰冰', 'e10adc3949ba59abbe56e057f20f883e')
+pt1_2: --- Logging error ---
+Traceback (most recent call last):
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\logging\__init__.py", line 995, in emit
+    stream.write(msg)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 77-87: character maps to &lt;undefined&gt;
+Call stack:
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles/ptvsd_launcher.py", line 43, in &lt;module&gt;
+    main(ptvsdArgs)
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 434, in main
+    run()
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 312, in run_file
+    runpy.run_path(target, run_name='__main__')
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 112, in &lt;module&gt;
+    main()   # 调用main()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 106, in main
+    run_all()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 32, in run_all
+    run(discover())
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 28, in run
+    HTMLTestRunner(stream=f, title="Api Test", description="测试描述", tester="Nick").run(suite)
+  File "d:\AqiProject\ApiDemo\api_test_framework\HTMLTestReportCN.py", line 571, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 653, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\cases\user\test_user_login.py", line 19, in test_user_login_password_wrong
+    res = self.send_request(data)
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\test_base.py", line 32, in send_request
+    log_case_info(case_name, url, args, expect_res, res.text)
+  File "d:\AqiProject\ApiDemo\api_test_framework\log\logger.py", line 15, in log_case_info
+    logging.info(a)
+Message: 'Expect result :&lt;h1&gt;失败，用户名或密码错误&lt;/h1&gt;'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\logging\__init__.py", line 995, in emit
+    stream.write(msg)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 74-75: character maps to &lt;undefined&gt;
+Call stack:
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles/ptvsd_launcher.py", line 43, in &lt;module&gt;
+    main(ptvsdArgs)
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 434, in main
+    run()
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 312, in run_file
+    runpy.run_path(target, run_name='__main__')
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 112, in &lt;module&gt;
+    main()   # 调用main()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 106, in main
+    run_all()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 32, in run_all
+    run(discover())
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 28, in run
+    HTMLTestRunner(stream=f, title="Api Test", description="测试描述", tester="Nick").run(suite)
+  File "d:\AqiProject\ApiDemo\api_test_framework\HTMLTestReportCN.py", line 571, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 653, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\cases\user\test_user_login.py", line 19, in test_user_login_password_wrong
+    res = self.send_request(data)
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\test_base.py", line 32, in send_request
+    log_case_info(case_name, url, args, expect_res, res.text)
+  File "d:\AqiProject\ApiDemo\api_test_framework\log\logger.py", line 16, in log_case_info
+    logging.info(b)
+Message: 'Args: {"name": "张三","password":"1234567"}'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\logging\__init__.py", line 995, in emit
+    stream.write(msg)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 78-88: character maps to &lt;undefined&gt;
+Call stack:
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles/ptvsd_launcher.py", line 43, in &lt;module&gt;
+    main(ptvsdArgs)
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 434, in main
+    run()
+  File "c:/Users/nickzh/.vscode/extensions/ms-python.python-2019.5.18426/pythonFiles\lib\python\ptvsd\__main__.py", line 312, in run_file
+    runpy.run_path(target, run_name='__main__')
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 112, in &lt;module&gt;
+    main()   # 调用main()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 106, in main
+    run_all()
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 32, in run_all
+    run(discover())
+  File "d:\AqiProject\ApiDemo\api_test_framework\run.py", line 28, in run
+    HTMLTestRunner(stream=f, title="Api Test", description="测试描述", tester="Nick").run(suite)
+  File "d:\AqiProject\ApiDemo\api_test_framework\HTMLTestReportCN.py", line 571, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\suite.py", line 122, in run
+    test(result)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 653, in __call__
+    return self.run(*args, **kwds)
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\cases\user\test_user_login.py", line 19, in test_user_login_password_wrong
+    res = self.send_request(data)
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\test_base.py", line 32, in send_request
+    log_case_info(case_name, url, args, expect_res, res.text)
+  File "d:\AqiProject\ApiDemo\api_test_framework\log\logger.py", line 17, in log_case_info
+    logging.info('Actually result:{}'.format(atc_res))
+Message: 'Actually result:&lt;h1&gt;失败，用户名或密码错误&lt;/h1&gt;'
+Arguments: ()
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='errorClass warning'>
+    <td>test_user_reg.TestUserReg</td>
+    <td class="text-center">2</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center">2</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',2)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='ft2_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_user_reg_exist</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_1'>错误</button>
+    <div id='div_ft2_1' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_1'>错误</button>
+    <div id='div_ft2_1' class="collapse in">
+    <pre>
+    
+ft2_1: Traceback (most recent call last):
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\cases\user\test_user_reg.py", line 44, in test_user_reg_exist
+    name=json.load(case_data['args']).get('name')
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\json\__init__.py", line 296, in load
+    return loads(fp.read(),
+AttributeError: 'str' object has no attribute 'read'
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft2_2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_user_reg_normal</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_2'>错误</button>
+    <div id='div_ft2_2' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_2'>错误</button>
+    <div id='div_ft2_2' class="collapse in">
+    <pre>
+    
+ft2_2: Traceback (most recent call last):
+  File "d:\AqiProject\ApiDemo\api_test_framework\test\cases\user\test_user_reg.py", line 15, in test_user_reg_normal
+    name=json.load(case_data['args']).get('name')
+  File "D:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\lib\json\__init__.py", line 296, in load
+    return loads(fp.read(),
+AttributeError: 'str' object has no attribute 'read'
 
 
     </pre>
@@ -228,10 +593,10 @@ pt2_2: (5, '范冰冰', 'e10adc3949ba59abbe56e057f20f883e')
 <tr id='total_row' class="text-center active">
     <td>总计</td>
     <td>4</td>
-    <td>4</td>
-    <td>0</td>
-    <td>0</td>
-    <td>通过率：100.00%</td>
+    <td>1</td>
+    <td>1</td>
+    <td>2</td>
+    <td>通过率：25.00%</td>
 </tr>
 </table>
 

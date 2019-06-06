@@ -18,6 +18,12 @@ class TestUserLogin(TestBase):
         data=get_test_data(self.data_list,'test_user_login_password_wrong')
         res = self.send_request(data)
         self.assertIn(res.text,data['expect_res'],'The text should be 失败..')
+    
+    def test_user_login(self):
+        data=get_test_data(self.data_list,'test_user_login')
+        res = self.send_request(data)
+        self.assertIn(res['data'].text,data['expect_res'],'The text should be 失败..')
+        self.assertIn(res.text,data['expect_res'],'The text should be 失败..')
         
 if __name__ == '__main__':  # 如果是直接从当前模块执行（非别的模块调用本模块）
     unittest.main(verbosity=2)  # 运行本测试类所有用例,verbosity为结果显示级别

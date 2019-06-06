@@ -1,5 +1,5 @@
-import smtplib
-import yaml
+import smtplib  
+import yaml                  
 import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart 

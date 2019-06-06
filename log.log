@@ -1,0 +1,76 @@
+[2019-04-29 16:31:00] INFO [run: run.py, 19] =========Testing start=======
+[2019-04-29 16:31:04] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_normal
+[2019-04-29 16:31:04] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-04-29 16:31:07] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_password_wrong
+[2019-04-29 16:31:07] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-04-29 16:31:07] INFO [run: run.py, 22] =========Test compelted=======
+[2019-04-29 16:31:11] INFO [send_email: send_email.py, 29] Email send successed!
+[2019-04-29 16:35:52] INFO [run: run.py, 19] =========Testing start=======
+[2019-04-29 16:35:54] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_normal
+[2019-04-29 16:35:54] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-04-29 16:35:55] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_password_wrong
+[2019-04-29 16:35:55] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-04-29 16:36:02] INFO [run: run.py, 22] =========Test compelted=======
+[2019-04-29 16:36:05] INFO [send_email: send_email.py, 29] Email send successed!
+[2019-04-30 18:29:23] INFO [run: run.py, 26] =========Testing start=======
+[2019-04-30 18:29:25] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_normal
+[2019-04-30 18:29:25] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-04-30 18:29:25] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_password_wrong
+[2019-04-30 18:29:25] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-04-30 18:29:27] INFO [run: run.py, 29] =========Test compelted=======
+[2019-05-10 18:22:39] INFO [run: run.py, 26] =========Testing start=======
+[2019-05-10 18:22:42] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_normal
+[2019-05-10 18:22:42] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-05-10 18:22:42] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_password_wrong
+[2019-05-10 18:22:42] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-05-10 18:22:42] INFO [run: run.py, 29] =========Test compelted=======
+[2019-05-14 10:54:06] INFO [run: run.py, 26] =========Testing start=======
+[2019-05-14 10:54:07] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_normal
+[2019-05-14 10:54:07] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-05-14 10:54:07] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_password_wrong
+[2019-05-14 10:54:07] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-05-14 10:54:07] INFO [run: run.py, 29] =========Test compelted=======
+[2019-05-23 16:44:13] INFO [run: run.py, 26] =========Testing start=======
+[2019-05-23 16:44:29] INFO [run: run.py, 29] =========Test compelted=======
+[2019-05-24 16:38:10] INFO [run: run.py, 26] =========Testing start=======
+[2019-05-24 16:38:23] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_normal
+[2019-05-24 16:38:23] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-05-24 16:38:25] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_password_wrong
+[2019-05-24 16:38:25] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-05-24 16:38:25] INFO [run: run.py, 29] =========Test compelted=======
+[2019-05-24 16:40:11] INFO [run: run.py, 26] =========Testing start=======
+[2019-05-24 16:40:15] INFO [run: run.py, 29] =========Test compelted=======
+[2019-06-05 15:56:05] INFO [run: run.py, 26] =========Testing start=======
+[2019-06-05 15:56:05] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_normal
+[2019-06-05 15:56:05] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-06-05 15:56:06] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_password_wrong
+[2019-06-05 15:56:06] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-06-05 15:56:06] INFO [run: run.py, 29] =========Test compelted=======
+[2019-06-05 15:59:14] INFO [run: run.py, 26] =========Testing start=======
+[2019-06-05 16:00:08] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_normal
+[2019-06-05 16:00:08] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-06-05 16:00:46] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_password_wrong
+[2019-06-05 16:00:46] INFO [log_case_info: logger.py, 19] Url :http://115.28.108.130:5000/api/user/login/
+[2019-06-05 16:01:18] INFO [run: run.py, 29] =========Test compelted=======
+[2019-06-06 17:09:09] INFO [log_case_info: logger.py, 15] Expect result :
+[2019-06-06 17:09:09] INFO [log_case_info: logger.py, 16] Args: {"username": "A","app_key": "709F2E592E5108A4AA566A42239C3D6C","password":"f66f042cacc621c0235c9be988379b8f"}
+[2019-06-06 17:09:09] INFO [log_case_info: logger.py, 18] TestCase:test_user_login
+[2019-06-06 17:09:09] INFO [log_case_info: logger.py, 19] Url :http://hn216.api.yesapi.cn/?s=App.User.Login
+[2019-06-06 17:12:06] INFO [log_case_info: logger.py, 15] Expect result :
+[2019-06-06 17:12:06] INFO [log_case_info: logger.py, 16] Args: {"username": "A","app_key": "709F2E592E5108A4AA566A42239C3D6C","password":"f66f042cacc621c0235c9be988379b8f"}
+[2019-06-06 17:12:06] INFO [log_case_info: logger.py, 18] TestCase:test_user_login
+[2019-06-06 17:12:06] INFO [log_case_info: logger.py, 19] Url :http://hn216.api.yesapi.cn/?s=App.User.Login
+[2019-06-06 17:17:48] INFO [log_case_info: logger.py, 15] Expect result :
+[2019-06-06 17:17:48] INFO [log_case_info: logger.py, 16] Args: {"username": "A","app_key": "709F2E592E5108A4AA566A42239C3D6C","password":"f66f042cacc621c0235c9be988379b8f"}
+[2019-06-06 17:17:49] INFO [log_case_info: logger.py, 18] TestCase:test_user_login
+[2019-06-06 17:17:49] INFO [log_case_info: logger.py, 19] Url :http://hn216.api.yesapi.cn/?s=App.User.Login
+[2019-06-06 17:17:55] INFO [log_case_info: logger.py, 16] Args: {"username": "A","app_key": "709F2E592E5108A4AA566A42239C3D6C","password":"f66f042cacc621c0235c9be988379b88"}
+[2019-06-06 17:17:55] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_password_wrong
+[2019-06-06 17:17:55] INFO [log_case_info: logger.py, 19] Url :http://hn216.api.yesapi.cn/?s=App.User.Login
+[2019-06-06 17:19:25] INFO [log_case_info: logger.py, 15] Expect result :
+[2019-06-06 17:19:25] INFO [log_case_info: logger.py, 16] Args: {"username": "A","app_key": "709F2E592E5108A4AA566A42239C3D6C","password":"f66f042cacc621c0235c9be988379b8f"}
+[2019-06-06 17:19:25] INFO [log_case_info: logger.py, 18] TestCase:test_user_login
+[2019-06-06 17:19:25] INFO [log_case_info: logger.py, 19] Url :http://hn216.api.yesapi.cn/?s=App.User.Login
+[2019-06-06 17:19:30] INFO [log_case_info: logger.py, 16] Args: {"username": "A","app_key": "709F2E592E5108A4AA566A42239C3D6C","password":"f66f042cacc621c0235c9be988379b88"}
+[2019-06-06 17:19:30] INFO [log_case_info: logger.py, 18] TestCase:test_user_login_password_wrong
+[2019-06-06 17:19:30] INFO [log_case_info: logger.py, 19] Url :http://hn216.api.yesapi.cn/?s=App.User.Login
