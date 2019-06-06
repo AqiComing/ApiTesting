@@ -1,3 +1,3 @@
-# WebUIAutomationTesting
+# APITestingDemo
 
-阿7的WebTesting
+阿7的APITesting
